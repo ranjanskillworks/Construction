@@ -1,0 +1,43 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+
+#footer{
+    color: #aaaaaa;
+    & .footer-contents{
+      display: block;
+      background-color: #191919;
+      padding: 60px 0px;
+      & h2{
+        font-size: 20px;
+        color: #ffffff;
+        font-weight: map-get($font-weight, bold);
+      }
+      & ul{
+        padding: 0px;
+        list-style-type: none;
+        & span{
+          color: #ffffff;
+        }
+        & li a{
+          color: #ffffff;
+          &:hover{
+            color: $primary-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    & .copyright{
+      display: block;
+      background-color: #252525;
+      padding: 20px 0px;
+      & p{
+        font-size: 12px;
+        & a{
+          color: inherit;
+        }
+      }
+    }
+  }

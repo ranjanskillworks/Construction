@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Regular font family
+/// @type List
+$text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+$code-font-stack: 'Montserrat', 'Helvetica', 'Arial', 'Verdana', sans-serif !default;
+
+
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1180px !default;
+
+
+
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: (
+  'small': 480px,
+  'medium': 768px,
+  'large': 990px,
+) !default;
+
+
+
+
+
+//Primary Color
+$primary-color:#ffc000;
+
+//Accent Color
+$accent-color:#ef9b00;
+
+//Body Text Color
+$text-color:#707070;
+
+//Light Grey Color
+$light-grey-color:#f5f5f5;
+
+//Dark Grey Color
+$dark-grey-color:#999999;
+
+//Font Size
+$font-size:14px;
+
+//Font Weight
+$font-weight:(
+    "regular":400,
+    "medium":500,
+    "bold":700
+);
+
+//Text underline
+$text-underline:underline;

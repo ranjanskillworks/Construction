@@ -1,0 +1,359 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import
+  'scss/abstracts/variables',
+  'scss/abstracts/functions',
+  'scss/abstracts/mixins';
+
+// 2. Vendors
+@import
+  'scss/vendors/normalize';
+
+// 3. Base stuff
+@import
+  'scss/base/base',
+  'scss/base/fonts',
+  'scss/base/typography',
+  'scss/base/helpers';
+
+// 4. Layout-related sections
+@import
+  'scss/layout/header',
+  'scss/layout/footer';
+
+// 5. Components
+@import
+  'scss/components/button';
+
+// 6. Page-specific styles
+@import
+  'scss/pages/home';
+
+// 7. Themes
+@import
+  'scss/themes/default';
+
+
+
+
+/*Banner*/
+.carousel-item:before{
+  content: "";
+  position:absolute;
+  left:0px;
+  top:0px;
+  width:100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.46);
+  display: block !important;
+}
+.carousel-inner h1,
+.carousel-inner h2{
+  font-size: 54px;
+  font-weight: map-get($font-weight, bold);
+  margin-bottom: 30px;
+}
+.carousel-caption{
+  top: 25%;
+  & p{
+    font-weight: map-get($font-weight, bold);
+    font-size: 16px;
+    padding-bottom: 30px;
+  }
+}
+.carousel-item .btn-primary{
+  margin-right: 10px;
+}
+.carousel-item .btn-secondary{
+  margin-left: 10px;
+}
+
+
+/*About*/
+#about{
+  @include section(80px 0px);
+  & h2{
+    color: #000000;
+    font-weight: map-get($font-weight, bold);
+    &:after{
+      content: "";
+      width: 60px;
+      height: 4px;
+      display: block;
+      margin-top: 15px;
+      background-color: $primary-color;
+    }
+  }
+  & a.about-img{
+    position: relative;
+  }
+  & a.about-img:hover:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    display: block !important;
+    background-color: rgba($accent-color, $alpha: 0.4);
+  }
+  & h3{
+    color: #000000;
+    font-weight: map-get($font-weight, bold);
+    font-size: 20px;
+  }
+}
+
+
+/*Service*/
+#service{
+  @include section(80px 0px);
+  background-color: $light-grey-color;
+  & h2{
+    color: #000000;
+    font-weight: map-get($font-weight, bold);
+    &:after{
+      content: "";
+      width: 60px;
+      height: 4px;
+      display: block;
+      margin-top: 15px;
+      background-color: $primary-color;
+    }
+  }
+  & .service-item{
+    background-color: #ffffff;
+  }
+  & a.service-img{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    &:hover:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:100%;
+      height: 100%;
+      display: block !important;
+      background-color: rgba($accent-color, $alpha: 0.4);
+    }
+  }
+  & h3{
+    color: #000000;
+    font-weight: map-get($font-weight, bold);
+    font-size: 20px;
+  }
+}
+
+
+/*Tagline*/
+#tagline{
+  @include section(80px 0px);
+  background: url(images/tagline-bg.jpg) no-repeat center center / cover;
+  color:#ffffff;
+  & h2{
+    font-weight: map-get($font-weight, bold);
+  }
+  & p{
+    font-size: 18px;
+  }
+}
+
+
+/*Team*/
+#team{
+  @include section(80px 0px);
+  & h2{
+    color: #000000;
+    font-weight: map-get($font-weight, bold);
+    &:after{
+      content: "";
+      width: 60px;
+      height: 4px;
+      display: block;
+      margin-top: 15px;
+      background-color: $primary-color;
+    }
+  }
+  & h3{
+    color: #000000;
+    font-weight: map-get($font-weight, bold);
+    font-size: 15px;
+  }
+  & h4{
+    color: #999999;
+    font-weight: map-get($font-weight, bold);
+    font-size: 14px;
+  }
+}
+.owl-carousel .nav-btn{
+  height: 47px;
+  position: absolute;
+  width: 26px;
+  cursor: pointer;
+  top: 50% !important;
+}
+.owl-carousel .owl-prev.disabled,
+.owl-carousel .owl-next.disabled{
+pointer-events: none;
+opacity: 0.2;
+}
+.owl-carousel .prev-slide{
+  background: url(images/prev.png) no-repeat;
+  left: -33px;
+}
+.owl-carousel .next-slide{
+  background: url(images/next.png) no-repeat;
+  right: -33px;
+}
+.owl-carousel .prev-slide:hover{
+  filter: brightness(90%);
+}
+.owl-carousel .next-slide:hover{
+  filter: brightness(90%);
+}
+
+
+/*Closing Appeal*/
+#closing-appeal{
+  @include section(80px 0px);
+  background: url(images/closing-appeal-bg.jpg) no-repeat center center / cover;
+  color:#ffffff;
+  & h2{
+    font-weight: map-get($font-weight, bold);
+  }
+  & p{
+    font-size: 18px;
+  }
+}
+
+
+/*Testimonials and Partner*/
+#testimonials_partners{
+  @include section(80px 0px);
+  & h2{
+    color: #000000;
+    font-weight: map-get($font-weight, bold);
+    &:after{
+      content: "";
+      width: 60px;
+      height: 4px;
+      display: block;
+      margin-top: 15px;
+      background-color: $primary-color;
+    }
+  }
+}
+.testimonial-carousel{
+  background-color: $light-grey-color;
+  & img{
+    border-radius: 50%;
+    max-width: 120px;
+  }
+  & .testimonial-text {
+    margin-left: 20px;
+    & p{
+      font-size: 18px;
+      font-style: italic;
+    }
+    & h3{
+      color: #000000;
+      font-size: 16px;
+      font-weight: map-get($font-weight, bold);
+    }
+    & h4{
+      color: #999999;
+      font-size: 12px;
+      font-weight: map-get($font-weight, bold);
+    }
+  }  
+}
+
+.partner {
+  width: 32.8%;
+  & h3{
+    color: #999999;
+    font-size: 12px;
+    font-weight: map-get($font-weight, bold);
+    text-align: center;
+  }
+}
+
+
+/*Scroll to Top Button*/
+#scrollToTop{
+ position:fixed;
+ right:0px;
+ bottom:50px;
+ border: none;
+ background-color:$primary-color;
+ color: #ffffff;
+ height:40px;
+ width:40px;
+ font-size:15px;
+ display:none;
+ /*content: "f062";
+ font-family: "Font Awesome";
+ font-size: 20px;*/
+ &:hover{
+   background-color: $accent-color;
+ }
+}
+
+
+/*Responsive*/
+@media (max-width: map-get($breakpoints, large)){
+  .row {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #bannercarousel h1, #bannercarousel h2{
+    font-size: 36px;
+  }
+  #bannercarousel .carousel-inner img{
+    width: 140% !important;
+  }
+}
+
+@media (max-width: map-get($breakpoints, medium)){
+  .row {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #bannercarousel .carousel-inner img {
+    width: 150% !important;
+    height: 30vh;
+  }
+  #bannercarousel h1, #bannercarousel h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+  #bannercarousel .carousel-inner p{
+    display: none;
+  }
+  .testimonial-carousel img{
+    max-width: 150px !important;
+    margin-bottom: 20px !important;
+  }
+  .partner {
+    width: 49.6%;
+  }
+}
+
+@media (max-width: map-get($breakpoints, small)){
+  section {
+    padding: 40px 0px !important;
+  }
+  #bannercarousel .carousel-inner img {
+    width: 150% !important;
+    height: 40vh;
+  }
+  .partner {
+    width: 100%;
+  }
+}
